@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Sora:wght@100..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+}
+*::selection {
+  background: rgb(110, 237, 25);
+  color: white;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 10vh;
+  background: white;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.navelements {
+  margin: 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+}
+
+.navele {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin: 0 2vw;
+  cursor: pointer;
+}
+
+.navbtn {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin: 0 2vw;
+  border: 1px solid black;
+  padding: 0.5vw 1vw;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.navbtn:hover,
+.homebtn:hover,
+.whyusbtn:hover {
+  background: black;
+  color: white;
+}
+
+.homesection,
+.whyussection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.homecontent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: bold;
+  width: 50vw;
+  text-wrap: balance;
+}
+
+.homeimg {
+  background: url(./Assets/flat-international-nurses-day-illustration_23-2149372404-removebg-preview.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40vw;
+  height: 70vh;
+}
+
+.whyusImg {
+  background: url(./Assets/whyusbg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40vw;
+  height: 70vh;
+}
+.homecontainer,
+.whyuscontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.homebtn,
+.whyusbtn {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin: 0 4vw;
+  border: 2px solid black;
+  padding: 0.5vw 1vw;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s;
+}
