@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Sora", sans-serif;
+  overflow-x: hidden;
 }
 *::selection {
   background: rgb(110, 237, 25);
@@ -23,7 +24,8 @@ section {
   left: 0;
   width: 100vw;
   height: 10vh;
-  background: white;
+  /* background: white; */
+  backdrop-filter: blur(10px);
   justify-content: space-between;
   align-items: center;
   text-align: center;
@@ -66,15 +68,11 @@ section {
   transition: all 0.5s;
 }
 
-.navbtn:hover,
-.homebtn:hover,
-.whyusbtn:hover {
-  background: black;
-  color: white;
-}
-
 .homesection,
-.whyussection {
+.whyussection,
+.howdowedosection,
+.testsection,
+.contactusSection {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,6 +80,50 @@ section {
   height: 100vh;
 }
 
+.footersection {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 20vh;
+  text-align: center;
+  padding: 1.5vw;
+}
+
+.footerupr,
+.footerlwr {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.footerlwr {
+  justify-content: space-around;
+}
+.footeicons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testsection,
+.contactusSection {
+  flex-direction: column;
+  text-align: center;
+}
+
+.homecontainer,
+.whyuscontainer,
+.howedocontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.whyussection,
+.testsection,
+.footersection {
+  background: rgba(214, 236, 255, 0.509);
+}
 .homecontent {
   display: flex;
   justify-content: center;
@@ -91,6 +133,31 @@ section {
   font-weight: bold;
   width: 50vw;
   text-wrap: balance;
+}
+.homebtn,
+.whyusbtn,
+.howedobtn,
+.contactusbtn {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
+  font-weight: 400;
+  margin: 0 4vw;
+  border: 2px solid black;
+  padding: 0.5vw 1vw;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.navbtn:hover,
+.homebtn:hover,
+.whyusbtn:hover,
+.howedobtn:hover,
+.contactusbtn:hover {
+  background: black;
+  color: white;
 }
 
 .homeimg {
@@ -110,24 +177,137 @@ section {
   width: 40vw;
   height: 70vh;
 }
-.homecontainer,
-.whyuscontainer {
+
+.howedobg {
+  background: url(./Assets/howedonurse.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 40vw;
+  height: 70vh;
+}
+
+.testcontainer {
+  width: 80vw;
+  height: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.testcard {
+  /* margin-top: 30vh; */
+  background: transparent;
+  width: 20vw;
+  height: auto;
+  padding: 20px;
+  border: 4px solid white;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.testcard:hover {
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, darkblue, rgb(50, 160, 204)) border-box;
+  border-radius: 15px;
+  border: 4px solid transparent;
+
+  .testcardcontent {
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(to right, darkblue, rgb(50, 160, 204)) border-box;
+    border-radius: 15px;
+    border: 2px solid transparent;
+  }
+  .testcardimg {
+    background: linear-gradient(white, white) padding-box,
+      linear-gradient(to right, darkblue, rgb(50, 160, 204)) border-box;
+    border-radius: 50%;
+    border: 4px solid transparent;
+  }
+}
+.testcardcontent {
+  height: auto;
+  text-align: center;
+  background: white;
+  padding: 5px;
+  border-radius: 15px;
+  transition: all 0.5s;
+}
+
+.testcardimgandname {
+  transition: all 0.5s;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  margin-top: 3vh;
+  border-radius: 15px;
 }
-.homebtn,
-.whyusbtn {
-  text-decoration: none;
-  color: black;
-  font-size: 1.5vw;
-  font-weight: 400;
-  margin: 0 4vw;
-  border: 2px solid black;
-  padding: 0.5vw 1vw;
-  border-radius: 5px;
-  background: transparent;
-  cursor: pointer;
+
+.testcardimg {
+  margin: 0 10px 5px 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
   transition: all 0.5s;
+}
+
+.formandcontat {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+}
+
+.contactform,
+.contatcon {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 80%;
+}
+
+.name,
+.email,
+.message {
+  width: 20vw;
+  height: 5vh;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.contactimg {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  background: black;
+}
+
+.contactcard {
+  width: 20vw;
+  display: flex;
+  gap: 1vw;
+}
+
+.footercard h1 {
+  font-size: 1.5vw;
+}
+
+.copyicons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.facebook,
+.linkedin,
+.insta,
+.twitter {
+  width: 1.5vw;
+  height: 1.5vw;
+  margin: 1vw;
+  border-radius: 0.5vw;
+  background: black;
 }
