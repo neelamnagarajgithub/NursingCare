@@ -1,4 +1,44 @@
+import { useContext, useEffect } from "react";
+import { NurseContext } from "../../Context/NurseContext";
+
 function NurseList() {
-  return <div>Lists of nurses</div>;
+  // let nursearray = [];
+  let nursesdata = [];
+  const { nurses, setNurses } = useContext(NurseContext);
+  useEffect(function () {
+    async function getnurses() {
+      const response = await fetch(`/api/nurses`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" },
+      });
+      const res = await response.json();
+      // console.log(res.allnurse);
+      nursesdata = res.allnurse;
+      // console.log(nursesdata);
+      // nursearray = Object.values(nursesdata);
+      setNurses(nursesdata);
+      // const response = await fetch(`/api/nurses`);
+      // const res = await response.json();
+      // console.log(res);
+    }
+    getnurses();
+  }, []);
+  return (
+    <div>
+      <div className="nurselistcontainer">
+        <div className="nurselist">
+          {nurses.map((nurse) => (
+            <div className="nursecard" key={nurse._id}>
+              <h1>{nurse.name}</h1>
+              <p>{nurse.age}</p>
+              <p>{nurse.sex}</p>
+              <p>{nurse.email}</p>
+              <p>{nurse.previousWorkExperience}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 export default NurseList;
