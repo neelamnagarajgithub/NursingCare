@@ -84,7 +84,7 @@ section {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 20vh;
+  height: 25vh;
   text-align: center;
   padding: 1.5vw;
 }
@@ -137,7 +137,8 @@ section {
 .homebtn,
 .whyusbtn,
 .howedobtn,
-.contactusbtn {
+.contactusbtn,
+.searchnursebtn {
   text-decoration: none;
   color: black;
   font-size: 1.5vw;
@@ -155,7 +156,8 @@ section {
 .homebtn:hover,
 .whyusbtn:hover,
 .howedobtn:hover,
-.contactusbtn:hover {
+.contactusbtn:hover,
+.searchnursebtn:hover {
   background: black;
   color: white;
 }
@@ -310,4 +312,30 @@ section {
   margin: 1vw;
   border-radius: 0.5vw;
   background: black;
+}
+
+.nursescontainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+.searchnursecontainer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 10vh;
+  backdrop-filter: blur(10px);
+}
+
+.searchnurse {
+  width: 20vw;
+  height: 6vh;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: 1vw;
 }
