@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Sora", sans-serif;
   overflow-x: hidden;
+  transition: all 0.5s;
 }
 *::selection {
   background: rgb(110, 237, 25);
@@ -484,4 +485,31 @@ section {
   height: 30vh;
   background: rgb(188, 212, 240);
   border-radius: 1vw;
+}
+
+.nursecard:hover {
+  transition: all 0.5s;
+  .booknowbtnonhover {
+    transition: all 0.5s;
+    display: inline;
+  }
+}
+.booknowbtnonhover {
+  transition: all 0.5s;
+  display: none;
+  position: relative;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin: 0 2vw;
+  padding: 0.5vw 1vw;
+  border-radius: 5px;
+  background: rgb(0, 9, 113);
+  cursor: pointer;
+  transition: all 0.5s;
+  color: rgb(42, 173, 255);
+}
+
+.booknowbtnonhover:hover {
+  background: rgb(42, 173, 255);
+  color: rgb(0, 7, 80);
 }

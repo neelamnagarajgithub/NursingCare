@@ -2,7 +2,6 @@ import { useContext, useEffect } from "react";
 import { NurseContext } from "../../Context/NurseContext";
 
 function NurseList() {
-  // let nursearray = [];
   let nursesdata = [];
   const { nurses, setNurses } = useContext(NurseContext);
   useEffect(function () {
@@ -12,14 +11,8 @@ function NurseList() {
         headers: { "Content-Type": "application/json" },
       });
       const res = await response.json();
-      // console.log(res.allnurse);
       nursesdata = res.allnurse;
-      // console.log(nursesdata);
-      // nursearray = Object.values(nursesdata);
       setNurses(nursesdata);
-      // const response = await fetch(`/api/nurses`);
-      // const res = await response.json();
-      // console.log(res);
     }
     getnurses();
   }, []);
@@ -34,6 +27,9 @@ function NurseList() {
               <p>{nurse.sex}</p>
               <p>{nurse.email}</p>
               <p>{nurse.previousWorkExperience}</p>
+              <span>
+                <button className="booknowbtnonhover">Book Now!</button>
+              </span>
             </div>
           ))}
         </div>
