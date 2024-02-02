@@ -1,7 +1,9 @@
 import { useContext, useEffect } from "react";
 import { NurseContext } from "../../Context/NurseContext";
+import { useNavigate } from "react-router";
 
 function NurseList() {
+  const navigate = useNavigate();
   let nursesdata = [];
   const { nurses, setNurses } = useContext(NurseContext);
   useEffect(function () {
@@ -16,6 +18,10 @@ function NurseList() {
     }
     getnurses();
   }, []);
+
+  function handleViewProfile(nurseid) {
+    navigate(`/nurse/${nurseid}`);
+  }
   return (
     <div>
       <div className="nurselistcontainer">
@@ -28,7 +34,15 @@ function NurseList() {
               <p>{nurse.email}</p>
               <p>{nurse.previousWorkExperience}</p>
               <span>
-                <button className="booknowbtnonhover">Book Now!</button>
+                <button
+                  className="booknowbtnonhover"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleViewProfile(nurse._id);
+                  }}
+                >
+                  View Profile
+                </button>
               </span>
             </div>
           ))}

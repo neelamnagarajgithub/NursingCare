@@ -272,6 +272,9 @@ section {
   padding: 5px;
 }
 
+.message {
+  height: auto;
+}
 .contactimg {
   width: 40px;
   height: 40px;
@@ -512,4 +515,129 @@ section {
 .booknowbtnonhover:hover {
   background: rgb(42, 173, 255);
   color: rgb(0, 7, 80);
+}
+
+.nurseprofilesection {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url(./Assets/nurseprofilebg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.leftpartnurse,
+.rightpartnurse {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 30vw;
+  height: 90vh;
+  margin: 2vw;
+}
+
+.rightpartnurse {
+  width: 60vw;
+}
+
+.leftup,
+.leftdown,
+.rightup,
+.rightdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 25vw;
+  height: 40vh;
+  border-radius: 2vw;
+  background: rgba(5, 5, 181, 0.148);
+  backdrop-filter: blur(10px);
+}
+
+.rightup {
+  justify-content: space-evenly;
+}
+.leftup {
+  height: 30vh;
+}
+
+.leftdown {
+  height: 50vh;
+}
+
+.rightup,
+.rightdown {
+  width: 60vw;
+}
+.leftdown p {
+  font-size: 1.5vw;
+}
+
+.leftcrn,
+.leftpwe {
+  margin-top: 2vw;
+  color: rgb(19, 2, 86);
+  font-weight: 800;
+}
+
+.leftupimg {
+  background: white;
+  width: 10vw;
+  height: 20vh;
+  border-radius: 50%;
+  margin: 2vw;
+}
+
+.rightup h1 {
+  font-size: 6vw;
+  font-weight: 800;
+}
+
+.rightup p {
+  font-size: 1.5vw;
+}
+
+.rightleft,
+.rightright {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  height: 80%;
+  margin: 2vw;
+}
+
+.rightdown {
+  flex-direction: row;
+}
+
+.booknowbtn {
+  color: white;
+  background: rgba(0, 69, 148, 0.219);
+  backdrop-filter: blur(10px);
+  border: none;
+  font-size: 2vw;
+  font-weight: 700;
+  margin: 0 2vw;
+  padding: 0.5vw 1vw;
+  border-radius: 1vw;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.booknowbtn:hover {
+  background: rgba(0, 69, 148, 0.5);
+}
+
+.booknowbtn:active {
+  color: rgba(0, 69, 148, 0.8);
+  background: white;
 }
