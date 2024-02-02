@@ -3,7 +3,7 @@ function Testimonials() {
     <div className="testsection">
       <div className="testcontent">
         <h1>What people say about us</h1>
-        <p>no matter what health problem our team can hadle it</p>
+        <p>no matter what health problem our team can handle it</p>
       </div>
       <div className="testcontainer">
         <div className="testcard">

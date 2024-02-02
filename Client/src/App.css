@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: "Sora", sans-serif;
   overflow-x: hidden;
+  transition: all 0.5s;
 }
 *::selection {
   background: rgb(110, 237, 25);
@@ -72,7 +73,8 @@ section {
 .whyussection,
 .howdowedosection,
 .testsection,
-.contactusSection {
+.contactusSection,
+.nursescontainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,34 +82,21 @@ section {
   height: 100vh;
 }
 
-.footersection {
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 20vh;
-  text-align: center;
-  padding: 1.5vw;
-}
-
-.footerupr,
-.footerlwr {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.footerlwr {
-  justify-content: space-around;
-}
-.footeicons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .testsection,
-.contactusSection {
+.contactusSection,
+.nursescontainer {
   flex-direction: column;
   text-align: center;
+}
+
+.nursescontainer {
+  justify-content: space-between;
+}
+.whyussection,
+.testsection,
+.footersection,
+.nursescontainer {
+  background: rgba(214, 236, 255, 0.509);
 }
 
 .homecontainer,
@@ -117,13 +106,9 @@ section {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
-.whyussection,
-.testsection,
-.footersection {
-  background: rgba(214, 236, 255, 0.509);
-}
 .homecontent {
   display: flex;
   justify-content: center;
@@ -137,7 +122,7 @@ section {
 .homebtn,
 .whyusbtn,
 .howedobtn,
-.contactusbtn {
+.searchnursebtn {
   text-decoration: none;
   color: black;
   font-size: 1.5vw;
@@ -155,7 +140,7 @@ section {
 .homebtn:hover,
 .whyusbtn:hover,
 .howedobtn:hover,
-.contactusbtn:hover {
+.searchnursebtn:hover {
   background: black;
   color: white;
 }
@@ -176,6 +161,7 @@ section {
   background-repeat: no-repeat;
   width: 40vw;
   height: 70vh;
+  border-radius: 10px;
 }
 
 .howedobg {
@@ -185,6 +171,7 @@ section {
   background-repeat: no-repeat;
   width: 40vw;
   height: 70vh;
+  border-radius: 10px;
 }
 
 .testcontainer {
@@ -267,7 +254,13 @@ section {
   align-items: center;
   flex-direction: column;
   width: 50%;
-  height: 80%;
+  height: 90%;
+  margin-top: 30px;
+  overflow-y: hidden;
+}
+
+.contatcon {
+  margin-left: -100px;
 }
 
 .name,
@@ -280,20 +273,15 @@ section {
 }
 
 .contactimg {
-  width: 3vw;
-  height: 3vw;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background: black;
 }
 
 .contactcard {
-  width: 20vw;
+  width: 300px;
   display: flex;
   gap: 1vw;
-}
-
-.footercard h1 {
-  font-size: 1.5vw;
 }
 
 .copyicons {
@@ -301,13 +289,228 @@ section {
   justify-content: center;
   align-items: center;
 }
+
+.contactusbtn {
+  text-decoration: none;
+  color: black;
+  font-size: 1.4vw;
+  font-weight: 400;
+  margin: 0 4vw;
+  border: 2px solid black;
+  padding: 0.5vw 1vw;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.5s;
+  height: 180px;
+  text-align: center;
+  overflow-y: hidden;
+  margin-top: 30px;
+  margin: 10px;
+}
+
+.contactusbtn:hover {
+  background: black;
+  color: white;
+}
+
+.phone h4 {
+  text-align: left;
+}
+
+.Email h4 {
+  text-align: left;
+}
+
+.location h4 {
+  text-align: left;
+}
+
+.name,
+.email {
+  width: 300px;
+  border-radius: 10px;
+  height: 50px;
+  margin: 5px;
+  padding: 5px;
+  flex: 0 0 auto;
+  border: 1px solid black;
+}
+
+.message {
+  width: 300px;
+  border-radius: 10px;
+  height: 380px;
+  margin: 5px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+/* why us section */
+
+.whyuscontainer h1 {
+  text-align: center;
+}
+
+.whyuscontainer p {
+  width: 500px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* how we do */
+
+.howwedocontent h1 {
+  text-align: center;
+}
+
+.howwedocontent p {
+  width: 500px;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* testimonials */
+
+.testcontent h1 {
+  margin: 10px;
+}
+
+.testcontent p {
+  margin: 30px;
+}
+
+/* footer */
+
 .facebook,
 .linkedin,
 .insta,
 .twitter {
-  width: 1.5vw;
-  height: 1.5vw;
-  margin: 1vw;
-  border-radius: 0.5vw;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   background: black;
+  text-align: center;
+  margin: 10px;
+}
+
+.footercard h1 {
+  font-size: 1.5vw;
+  margin: 10px;
+}
+
+.footercard p {
+  margin: 10px;
+}
+
+.footersection {
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 20%;
+  text-align: center;
+  padding: 1.5vw;
+}
+
+.footerupr,
+.footerlwr {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footerupr {
+  flex-direction: row;
+  text-align: left;
+}
+
+.footerlwr {
+  justify-content: space-around;
+}
+
+.footeicons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hrrr {
+  margin: 20px;
+  width: 90%;
+}
+
+.searchnursecontainer {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100vw;
+  height: 10vh;
+  backdrop-filter: blur(10px);
+}
+
+.searchnurse {
+  width: 25vw;
+  height: 5vh;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid black;
+  margin: 10px;
+}
+
+.nurselistcontainer {
+  margin-top: 10vh;
+  width: 100vw;
+  height: auto;
+}
+
+.nurselist {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1vw;
+  justify-content: center;
+  align-items: center;
+  margin: 2vw;
+}
+.nursecard {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 2vw;
+  width: 20vw;
+  height: 30vh;
+  background: rgb(188, 212, 240);
+  border-radius: 1vw;
+}
+
+.nursecard:hover {
+  transition: all 0.5s;
+  .booknowbtnonhover {
+    transition: all 0.5s;
+    display: inline;
+  }
+}
+.booknowbtnonhover {
+  transition: all 0.5s;
+  display: none;
+  position: relative;
+  font-size: 1.5vw;
+  font-weight: 700;
+  margin: 0 2vw;
+  padding: 0.5vw 1vw;
+  border-radius: 5px;
+  background: rgb(0, 9, 113);
+  cursor: pointer;
+  transition: all 0.5s;
+  color: rgb(42, 173, 255);
+}
+
+.booknowbtnonhover:hover {
+  background: rgb(42, 173, 255);
+  color: rgb(0, 7, 80);
 }
